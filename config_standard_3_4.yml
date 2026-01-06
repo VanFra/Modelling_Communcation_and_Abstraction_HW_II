@@ -1,0 +1,21 @@
+save: True # save results
+save_path: "./tutorial-emergent-abstractions"
+learning_rate: 0.001
+batch_size: 32
+n_epochs: 10
+load_dataset: 'standard/dim(3,4)_sf10.ds' # dataset can be created with pickle_ds.py and then loaded
+attributes: 3 # number of attributes of objects
+values: 4 # number of values of objects
+game_size: 10 # number of objects that together form a target concept / context
+scaling_factor: 10 # number of concepts (randomly composed of objects) in the dataset
+vocab_size_user: 16 # size of the vocabulary
+max_mess_len: 0 # specify maximum message length - 0 means none specified
+hidden_size: 128 # of sender and receiver cells
+sender_cell: 'gru' # one out of ['gru','lstm','rnn']
+receiver_cell: 'gru'
+temperature: 2 # for Gumbel-Softmax training
+temp_update: 0.99 # for GS
+length_cost: 0.0 # length cost pressure
+path: ""
+context_unaware: False # game setting: if false, context-aware is trained
+load_checkpoint: False # skip training and load pretrained model from checkpoint
