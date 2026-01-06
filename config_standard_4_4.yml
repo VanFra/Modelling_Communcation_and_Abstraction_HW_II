@@ -19,3 +19,4 @@ length_cost: 0.0 # length cost pressure
 path: ""
 context_unaware: False # game setting: if false, context-aware is trained
 load_checkpoint: False # skip training and load pretrained model from checkpoint
+hierarchical: False 
