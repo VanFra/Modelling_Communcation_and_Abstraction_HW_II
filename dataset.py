@@ -492,7 +492,7 @@ class DataSet(torch.utils.data.Dataset):
             objects: a list with all object-tuples that satisfy the concept
             fixed: a tuple that denotes how many and which attributes are fixed
         """
-        fixed_vectors = self.get_fixed_vectors(self.properties_dim)
+        fixed_vectors = self.get_fixed_vectors(self.properties_dim, self.hierarchical)
         # create all possible concepts
         all_fixed_object_pairs = list(itertools.product(self.all_objects, fixed_vectors))
 
